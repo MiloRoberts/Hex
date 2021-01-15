@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hex</title>
+    <script>
+      var hexdeck = [];
+      var defensedeck = [];
+
+      var numplayers = 3;
+      // Below is are temporary variables for individuals' hands.
+      var numhexcards = 4;
+      var numdefensecards = 3;
+
+      // function startGame() {
+      //   changeName();
+      //   mixHexCardDeck();
+      //   mixDefenseCardDeck();
+      //   randomizePlayerOrder();
+      // }
+
+      // TO DO: Change function to use players as elements in array
+      function changeName() {
+        document.getElementById("player1").innerHTML = prompt(
+          "Type your name below.",
+          "Player1"
+        );
+        if (document.getElementById("player1").innerHTML == "") {
+          document.getElementById("player1").innerHTML = "Player1";
+        }
+      }
+
+      // function mixHexCardDeck() {}
+
+      // function mixDefenseCardDeck() {}
+
+      // function randomizePlayerOrder() {}
+
+      // function choosePlayer() {}
+
+      // function drawDefenseCard() {}
+
+      // function drawHexCard() {}
+
+      function chooseRandomPlayer() {
+        var randomplayer = Math.floor(Math.random() * numplayers + 1);
+        alert(randomplayer);
+      }
+
+      // function startNextRound() {}
+
+      // function beginWithNextPlayer() {}
+
+      // function confirm() {}
+
+      // function endGame() {}
+
+      // function chooseCard() {}
+
+      // TO DO: Variables for this function will need to be changed.
+      function refreshHand() {
+        for (var idx = numhexcards; idx > 0; --idx) {
+          if (numdefensecards >= 5) {
+            return;
+          }
+          // drawHexCard() {};
+        }
+      }
+      function showHandSize() {
+        document.getElementById("player1handsize").value = 4;
+      }
+      // TO DO: The Hexes should initially be set to hidden.
+      function showHideHexes() {
+        if (document.getElementById("player1hexes").style.display == "block") {
+          document.getElementById("player1hexes").style.display = "none";
+          document.getElementById("player1showhexesbutton").innerHTML =
+            "Show Hexes";
+        } else {
+          document.getElementById("player1hexes").style.display = "block";
+          document.getElementById("player1showhexesbutton").innerHTML =
+            "Hide Hexes";
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="player1" class="player">
+      <p>Player1</p>
+      <label for="player1handsize">Defense Cards:</label>
+      <input type="text" id="player1handsize" size="1" readonly /><label
+        for="player1numberhexes"
+        >Hex Cards:</label
+      >
+      <input type="text" id="player1numberhexes" size="1" readonly />
+      <button
+        type="button"
+        id="player1showhexesbutton"
+        onclick="showHideHexes()"
+      >
+        Show Hexes
+      </button>
+      <ul id="player1hexes">
+        <li>Hex 1</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="player2" class="player">
+      <p>Player2</p>
+      <label for="player2handsize">Defense Cards:</label>
+      <input type="text" id="player2handsize" size="1" readonly />
+      <label for="player2numberhexes">Hex Cards:</label>
+      <input type="text" id="player2numberhexes" size="1" readonly />
+      <ul>
+        <li>Hex 1</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="player3" class="player">
+      <p>Player3</p>
+      <label for="player3handsize">Defense Cards:</label>
+      <input type="text" id="player3handsize" size="1" readonly />
+      <label for="player3numberhexes">Hex Cards:</label>
+      <input type="text" id="player3numberhexes" size="1" readonly />
+      <ul>
+        <li>Hex 1</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="player4" class="player">
+      <p>Player4</p>
+      <label for="player4handsize">Defense Cards:</label>
+      <input type="text" id="player4handsize" size="1" readonly />
+      <label for="player4numberhexes">Hex Cards:</label>
+      <input type="text" id="player4numberhexes" size="1" readonly />
+      <ul>
+        <li>Hex 1</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="player5" class="player">
+      <p>Player5</p>
+      <label for="player5handsize">Defense Cards:</label>
+      <input type="text" id="player5handsize" size="1" readonly />
+      <label for="player5numberhexes">Hex Cards:</label>
+      <input type="text" id="player5numberhexes" size="1" readonly />
+      <ul>
+        <li>Hex 1</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="player6" class="player">
+      <p>Player6</p>
+      <label for="player6handsize">Defense Cards:</label>
+      <input type="text" id="player6handsize" size="1" readonly />
+      <label for="player6numberhexes">Hex Cards:</label>
+      <input type="text" id="player6numberhexes" size="1" readonly />
+      <ul>
+        <li>Hex 1</li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+
+    <button type="button" onclick="drawHexCard()">Draw Hex Card</button>
+    <button type="button" onclick="showHandSize()">Test Stuff</button>
+
+    <ul>
+      Before Game Start
+      <li>Ask number of players total</li>
+      <li>Type name for each player on device</li>
+      <li>Confirm everything is ready</li>
+      <li>Randomize player position</li>
+    </ul>
+    <ul>
+      At Game Start
+      <li>Each player given starting defense cards</li>
+      <li>Each player given starting hex cards</li>
+      <li>First player chosen</li>
+    </ul>
+    <ul>
+      At Round Start
+      <li>Cycle between players at round start</li>
+      <li>Players receive defensive cards</li>
+      <li>First player chooses who to send hex to</li>
+    </ul>
+    <ul>
+      During Turn
+      <li>Player chooses to take hex or play defense card</li>
+      <li>Player takes hex</li>
+      <li>Player chooses defensive card</li>
+      <li>If card allows more cards to be played, go back one step</li>
+      <li>Defensive cards take effect</li>
+      <li>Hex may get updated with new cards</li>
+      <li>Player sends hex to another player</li>
+      <li>Any player may need to draw a new hex card</li>
+    </ul>
+    <br />
+    <ul>
+      Server Stuff
+    </ul>
+    <ul>
+      Client Stuff
+    </ul>
+  </body>
+</html>

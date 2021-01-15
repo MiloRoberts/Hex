@@ -1,0 +1,39 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+#player1 p {
+  color: orange;
+}
+
+#player2 p {
+  color: green;
+}
+
+#player3 p {
+  color: purple;
+}
+
+#player4 p {
+  color: yellow;
+}
+
+#player5 p {
+  color: red;
+}
+
+#player6 p {
+  color: blue;
+}
+
+.player ul {
+  list-style-type: none;
+  font-style: italic;
+}
+
+input {
+  background-color: black;
+  border: none;
+  color: white;
+}
